@@ -1,0 +1,21 @@
+# ninja log v6
+3	77	8057431827087085	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	4a7a7ee94fa41755
+3	77	8057431827087085	C:/Mini Exchange/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	4a7a7ee94fa41755
+79	2861	8057431854918069	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	8a0fd2bbf34713b6
+79	2861	8057431854918069	C:/Mini Exchange/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	8a0fd2bbf34713b6
+2861	2951	8057431855816390	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	69b6b7cc9fa8ce2b
+2861	2951	8057431855816390	C:/Mini Exchange/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	69b6b7cc9fa8ce2b
+2953	3034	8057431856651319	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	72a5a6d8a7518b8f
+2953	3034	8057431856651319	C:/Mini Exchange/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	72a5a6d8a7518b8f
+3034	3115	8057431857482034	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	c5b4d93853b8807e
+3034	3115	8057431857482034	C:/Mini Exchange/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	c5b4d93853b8807e
+3115	3196	8057431858262410	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	432dbb80cb73f651
+3115	3196	8057431858262410	C:/Mini Exchange/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	432dbb80cb73f651
+3196	3278	8057431859101576	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	55846c0d40d85bc1
+3196	3278	8057431859101576	C:/Mini Exchange/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	55846c0d40d85bc1
+3278	3358	8057431859896138	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	cde22eac3eae879f
+3278	3358	8057431859896138	C:/Mini Exchange/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	cde22eac3eae879f
+3359	3470	8057431860984331	CMakeFiles/googletest-populate-complete	cc4e8c6bc1c8dc29
+3359	3470	8057431860984331	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	cc4e8c6bc1c8dc29
+3359	3470	8057431860984331	C:/Mini Exchange/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	cc4e8c6bc1c8dc29
+3359	3470	8057431860984331	C:/Mini Exchange/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	cc4e8c6bc1c8dc29

@@ -1,0 +1,5 @@
+if(EXISTS "C:/Mini Exchange/build/tests/TestOrderBook[1]_tests.cmake")
+  include("C:/Mini Exchange/build/tests/TestOrderBook[1]_tests.cmake")
+else()
+  add_test(TestOrderBook_NOT_BUILT TestOrderBook_NOT_BUILT)
+endif()

@@ -1,0 +1,5 @@
+if(EXISTS "C:/Mini Exchange/build/tests/TestMatchingEngine[1]_tests.cmake")
+  include("C:/Mini Exchange/build/tests/TestMatchingEngine[1]_tests.cmake")
+else()
+  add_test(TestMatchingEngine_NOT_BUILT TestMatchingEngine_NOT_BUILT)
+endif()
