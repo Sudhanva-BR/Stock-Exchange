@@ -12,6 +12,7 @@
 #include "miniexchange/Order.h"
 #include "miniexchange/OrderBook.h"
 #include "miniexchange/TradeHistory.h"
+#include <functional>
 
 namespace miniexchange {
 
@@ -23,6 +24,9 @@ namespace miniexchange {
         bool cancelOrder(uint64_t orderId);
         bool modifyOrder(uint64_t orderId, double newPrice, uint32_t newQuantity);
 
+        using TradeCallback = std::function<void(const Trade&)>;
+        void setOnTradeCallback(TradeCallback callback);
+
     private:
         void matchAgainstAsks(Order& incomingBuyOrder);
         void matchAgainstBids(Order& incomingSellOrder);
@@ -30,6 +34,7 @@ namespace miniexchange {
         OrderBook& book_;
         TradeHistory& history_;
         uint64_t nextTradeId_;
+        TradeCallback tradeCallback_;
     };
 
 } // namespace miniexchange

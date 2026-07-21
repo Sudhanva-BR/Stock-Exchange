@@ -91,6 +91,36 @@ const std::string& OrderBook::getSymbol() const noexcept {
     return TopOfBook{front.getId(), price, front.getRemainingQuantity()};
 }
 
+std::vector<OrderBook::LevelSnapshot> OrderBook::getTopBids(int topN) const {
+    std::vector<LevelSnapshot> result;
+    int count = 0;
+    for (const auto& [price, level] : bids_) {
+        if (count >= topN) break;
+        uint32_t totalQty = 0;
+        for (const auto& order : level) {
+            totalQty += order.getRemainingQuantity();
+        }
+        result.push_back({price, totalQty});
+        count++;
+    }
+    return result;
+}
+
+std::vector<OrderBook::LevelSnapshot> OrderBook::getTopAsks(int topN) const {
+    std::vector<LevelSnapshot> result;
+    int count = 0;
+    for (const auto& [price, level] : asks_) {
+        if (count >= topN) break;
+        uint32_t totalQty = 0;
+        for (const auto& order : level) {
+            totalQty += order.getRemainingQuantity();
+        }
+        result.push_back({price, totalQty});
+        count++;
+    }
+    return result;
+}
+
     void OrderBook::fillBestBid(uint32_t quantity) {
     auto levelIt = bids_.begin();
     if (levelIt == bids_.end()) {

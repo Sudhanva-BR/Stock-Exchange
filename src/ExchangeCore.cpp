@@ -67,4 +67,20 @@ bool ExchangeCore::hasSymbol(const std::string& symbol) const noexcept {
     return symbols_.find(symbol) != symbols_.end();
 }
 
+std::vector<std::string> ExchangeCore::getSymbols() const {
+    std::vector<std::string> result;
+    for (const auto& [sym, data] : symbols_) {
+        result.push_back(sym);
+    }
+    return result;
+}
+
+MatchingEngine& ExchangeCore::getMatchingEngine(const std::string& symbol) {
+    auto it = symbols_.find(symbol);
+    if (it == symbols_.end()) {
+        throw std::out_of_range("ExchangeCore::getMatchingEngine: unknown symbol: " + symbol);
+    }
+    return it->second.engine;
+}
+
 } // namespace miniexchange

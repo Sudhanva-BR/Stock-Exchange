@@ -65,6 +65,10 @@ namespace miniexchange {
         // Returns true if at least one order has been submitted for that symbol.
         bool hasSymbol(const std::string& symbol) const noexcept;
 
+        std::vector<std::string> getSymbols() const;
+
+        MatchingEngine& getMatchingEngine(const std::string& symbol);
+
     protected:
         // SymbolData bundles the three objects that must live together.
         // engine_ MUST be declared last so that book_ and history_ are fully

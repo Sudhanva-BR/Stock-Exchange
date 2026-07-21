@@ -37,8 +37,16 @@ namespace miniexchange {
             uint32_t remainingQuantity;
         };
 
+        struct LevelSnapshot {
+            double price;
+            uint32_t totalQuantity;
+        };
+
         std::optional<TopOfBook> peekBestBid() const noexcept;
         std::optional<TopOfBook> peekBestAsk() const noexcept;
+
+        std::vector<LevelSnapshot> getTopBids(int topN) const;
+        std::vector<LevelSnapshot> getTopAsks(int topN) const;
 
         void fillBestBid(uint32_t quantity);
         void fillBestAsk(uint32_t quantity);

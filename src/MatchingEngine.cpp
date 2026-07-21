@@ -25,6 +25,10 @@ void MatchingEngine::submitOrder(Order incomingOrder) {
     // Market orders with leftover quantity are simply not rested (by design).
 }
 
+void MatchingEngine::setOnTradeCallback(TradeCallback callback) {
+    tradeCallback_ = std::move(callback);
+}
+
 void MatchingEngine::matchAgainstAsks(Order& incomingBuyOrder) {
     while (incomingBuyOrder.getRemainingQuantity() > 0) {
         auto topAsk = book_.peekBestAsk();
@@ -43,10 +47,14 @@ void MatchingEngine::matchAgainstAsks(Order& incomingBuyOrder) {
         incomingBuyOrder.fill(fillQty);
         book_.fillBestAsk(fillQty);
 
-        history_.recordTrade(Trade(
+        Trade trade(
             nextTradeId_++, incomingBuyOrder.getSymbol(), topAsk->price, fillQty,
             incomingBuyOrder.getId(), topAsk->orderId, Order::Clock::now()
-        ));
+        );
+        history_.recordTrade(trade);
+        if (tradeCallback_) {
+            tradeCallback_(trade);
+        }
     }
 }
 
@@ -68,10 +76,14 @@ void MatchingEngine::matchAgainstBids(Order& incomingSellOrder) {
         incomingSellOrder.fill(fillQty);
         book_.fillBestBid(fillQty);
 
-        history_.recordTrade(Trade(
+        Trade trade(
             nextTradeId_++, incomingSellOrder.getSymbol(), topBid->price, fillQty,
             topBid->orderId, incomingSellOrder.getId(), Order::Clock::now()
-        ));
+        );
+        history_.recordTrade(trade);
+        if (tradeCallback_) {
+            tradeCallback_(trade);
+        }
     }
 }
 
