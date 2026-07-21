@@ -1044,3 +1044,424 @@ select.form-input option {
   text-align: center;
   padding: 20px;
 }
+
+/* ─── HFT Dashboard Grid ─────────────────────────────────────────────── */
+.hft-dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(360px, 1.2fr) minmax(320px, 1fr) 300px;
+  gap: 16px;
+  align-items: stretch;
+  height: calc(100vh - 180px); /* Fill remaining height roughly */
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.center-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Order book: fixed max-height so it doesn't dominate the column */
+.card-orderbook .card-body {
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+/* Latency card in center column: auto height */
+.card-latency-center {
+  flex-shrink: 0;
+}
+
+/* ─── Watchlist Strip ────────────────────────────────────────────── */
+.watchlist-strip {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 6px 8px;
+  overflow-x: auto;
+}
+
+.watchlist-label {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  border-right: 1px solid var(--border-subtle);
+  margin-right: 4px;
+}
+
+.watchlist-ticker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--t-fast);
+}
+
+.watchlist-ticker:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.watchlist-ticker.wt-active {
+  background: rgba(56, 139, 253, 0.08);
+  border-color: rgba(56, 139, 253, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(56, 139, 253, 0.1);
+}
+
+.wt-symbol {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.wt-price {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 60px;
+  text-align: right;
+  transition: color var(--t-fast), text-shadow var(--t-fast);
+}
+
+.wt-price.up { color: var(--green-bright); }
+.wt-price.down { color: var(--red-bright); }
+
+/* Flash animations for price ticks */
+@keyframes flash-up {
+  0% { color: #fff; text-shadow: 0 0 12px #22c55e; }
+  100% { color: var(--green-bright); text-shadow: none; }
+}
+@keyframes flash-down {
+  0% { color: #fff; text-shadow: 0 0 12px #ef4444; }
+  100% { color: var(--red-bright); text-shadow: none; }
+}
+
+.wt-flash-up { animation: flash-up 0.4s ease-out; }
+.wt-flash-down { animation: flash-down 0.4s ease-out; }
+
+.wt-change {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  min-width: 50px;
+  text-align: right;
+}
+.wt-change.up { color: var(--green-base); }
+.wt-change.down { color: var(--red-base); }
+
+/* ─── Candlestick Chart ──────────────────────────────────────────── */
+.chart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 220px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.vwap-btn {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.vwap-btn:hover {
+  background: rgba(245, 158, 11, 0.2);
+}
+
+.vwap-btn.active {
+  background: #f59e0b;
+  color: #000;
+  border-color: #f59e0b;
+}
+
+/* ─── OBI Panel ──────────────────────────────────────────────────── */
+.obi-panel {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.obi-gauge-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.obi-side-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.obi-side-label.sell { color: var(--red-text); }
+.obi-side-label.buy { color: var(--green-text); }
+
+.obi-gauge-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid var(--border-strong);
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.obi-gauge-fill {
+  position: absolute;
+  top: 0; bottom: 0;
+  transition: left 0.2s ease, width 0.2s ease, background 0.2s ease;
+}
+
+.obi-gauge-mid-tick {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: rgba(255,255,255,0.4);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.obi-gauge-needle {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background: #fff;
+  z-index: 3;
+  transition: left 0.2s ease, background 0.2s ease;
+}
+
+.obi-readout-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.obi-value {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.obi-status {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.obi-history-wrap {
+  margin-top: 4px;
+}
+
+.obi-history-label {
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Latency Dashboard ──────────────────────────────────────────── */
+.lat-dashboard {
+  width: 100%;
+}
+
+.lat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.lat-metric-card {
+  background: rgba(0,0,0,0.2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lat-metric-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.lat-metric-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.lat-metric-sublabel {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.lat-metric-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.lat-metric-num {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.lat-metric-unit {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.lat-empty {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 20px;
+}
+
+/* ─── Alert Toasts ───────────────────────────────────────────────── */
+.alert-toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+  pointer-events: none; /* Let clicks pass through if not on a toast */
+}
+
+.alert-toast {
+  width: 320px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  gap: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  animation: toast-slide-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+@keyframes toast-slide-in {
+  0% { transform: translateX(120%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.alert-toast::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+}
+
+.toast-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.toast-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toast-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.toast-message {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.toast-progress-bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: currentColor;
+  opacity: 0.3;
+  transform-origin: left;
+  animation: toast-progress 4s linear forwards;
+}
+
+@keyframes toast-progress {
+  0% { transform: scaleX(1); }
+  100% { transform: scaleX(0); }
+}
+
+/* Alert Colors */
+.toast-yellow::before { background: var(--gold-bright); }
+.toast-yellow .toast-title { color: var(--gold-bright); }
+.toast-yellow .toast-progress-bar { color: var(--gold-bright); }
+
+.toast-blue::before { background: var(--blue-bright); }
+.toast-blue .toast-title { color: var(--blue-bright); }
+.toast-blue .toast-progress-bar { color: var(--blue-bright); }
+
+.toast-green::before { background: var(--green-bright); }
+.toast-green .toast-title { color: var(--green-bright); }
+.toast-green .toast-progress-bar { color: var(--green-bright); }
+
+.toast-red::before { background: var(--red-bright); }
+.toast-red .toast-title { color: var(--red-bright); }
+.toast-red .toast-progress-bar { color: var(--red-bright); }
+
+/* --- Order book level flash animation --- */
+/* Add flash overlay inside the order book row */
+.ob-row::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-out;
+}
+.ob-row.flash::after {
+  opacity: 0.3;
+  transition: none;
+}

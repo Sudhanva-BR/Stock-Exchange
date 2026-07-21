@@ -24,8 +24,7 @@ if not exist "cmake-build-debug\MiniExchangeServer.exe" (
     echo  [ERROR] Server binary not found!
     echo  Expected: cmake-build-debug\MiniExchangeServer.exe
     echo.
-    echo  Please open this project in CLion and build it first:
-    echo    Build ^> Build Project  [Ctrl+F9]
+    echo  Please build the C++ project first (CMake + MinGW/MSVC).
     echo.
     pause
     exit /b 1
@@ -40,22 +39,34 @@ if exist "%CLION_MINGW%\libgcc_s_seh-1.dll" (
     copy /Y "%CLION_MINGW%\libwinpthread-1.dll"   "cmake-build-debug\" >nul 2>&1
     echo       DLLs OK
 ) else (
-    echo       CLion MinGW not found at expected path — DLLs may already be present
+    echo       DLLs already present or CLion not at expected path — skipping copy
 )
 
-REM ── Launch C++ server in background ──────────────────────────────
+REM ── Launch C++ server in a VISIBLE new window (keeps running) ─────
 echo [3/4] Starting C++ Exchange Server on port 8080...
-start "MiniExchangeServer" /min cmd /c "cmake-build-debug\MiniExchangeServer.exe 8080"
-timeout /t 2 /nobreak >nul
+start "MiniExchangeServer" cmd /k "cd /d "%~dp0" && cmake-build-debug\MiniExchangeServer.exe 8080"
+echo       Waiting for server to be ready...
+timeout /t 3 /nobreak >nul
 
-REM Quick health check
-curl -s --max-time 3 http://localhost:8080/api/symbols >nul 2>&1
+REM Health check loop — retry up to 5 times
+set /a RETRIES=5
+:HEALTH_CHECK
+curl -s --max-time 2 http://localhost:8080/api/symbols >nul 2>&1
 if %ERRORLEVEL% == 0 (
-    echo       Server is UP ^& healthy
-) else (
-    echo       Server starting... ^(may take a moment^)
+    echo       Server is UP ^& healthy ^(http://localhost:8080^)
+    goto LAUNCH_FRONTEND
 )
+set /a RETRIES-=1
+if %RETRIES% GTR 0 (
+    echo       Still starting... ^(%RETRIES% retries left^)
+    timeout /t 2 /nobreak >nul
+    goto HEALTH_CHECK
+)
+echo.
+echo  [WARNING] Server did not respond in time. Check the server window for errors.
+echo  The frontend will still launch — it will reconnect when the server is ready.
 
+:LAUNCH_FRONTEND
 REM ── Launch frontend ───────────────────────────────────────────────
 echo [4/4] Starting React Frontend...
 if not exist "frontend\node_modules" (

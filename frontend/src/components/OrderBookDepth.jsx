@@ -1,6 +1,32 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState, useEffect, useRef } from 'react'
 
 const MAX_ROWS = 14
+
+const OrderBookRow = ({ lvl, isBid, maxTotal, fmt, fmtQty }) => {
+  const [flash, setFlash] = useState(false)
+  const prevQty = useRef(lvl.quantity)
+
+  useEffect(() => {
+    if (lvl.quantity !== prevQty.current) {
+      setFlash(true)
+      const timer = setTimeout(() => setFlash(false), 300)
+      prevQty.current = lvl.quantity
+      return () => clearTimeout(timer)
+    }
+  }, [lvl.quantity])
+
+  return (
+    <div
+      className={`ob-row ${isBid ? 'bid' : 'ask'} ${flash ? 'flash' : ''}`}
+      style={{ '--depth': `${(lvl.total / maxTotal) * 100}%` }}
+      title={`${isBid ? 'Bid' : 'Ask'} ${fmt(lvl.price)} × ${fmtQty(lvl.quantity)}`}
+    >
+      <span className="ob-price">{fmt(lvl.price)}</span>
+      <span className="ob-qty">{fmtQty(lvl.quantity)}</span>
+      <span className="ob-total">{fmtQty(lvl.total)}</span>
+    </div>
+  )
+}
 
 /**
  * OrderBookDepth — renders BIDS (left) and ASKS (right) side-by-side.
@@ -65,16 +91,14 @@ function OrderBookDepth({ orderBook }) {
               <div className="ob-empty">No bids</div>
             ) : (
               bidsWithTotal.map((lvl, i) => (
-                <div
-                  key={`bid-${i}`}
-                  className="ob-row bid"
-                  style={{ '--depth': `${(lvl.total / maxBidTotal) * 100}%` }}
-                  title={`Bid ${fmt(lvl.price)} × ${fmtQty(lvl.quantity)}`}
-                >
-                  <span className="ob-price">{fmt(lvl.price)}</span>
-                  <span className="ob-qty">{fmtQty(lvl.quantity)}</span>
-                  <span className="ob-total">{fmtQty(lvl.total)}</span>
-                </div>
+                <OrderBookRow
+                  key={`bid-${lvl.price}`}
+                  lvl={lvl}
+                  isBid={true}
+                  maxTotal={maxBidTotal}
+                  fmt={fmt}
+                  fmtQty={fmtQty}
+                />
               ))
             )}
           </div>
@@ -92,16 +116,14 @@ function OrderBookDepth({ orderBook }) {
               <div className="ob-empty">No asks</div>
             ) : (
               asksWithTotal.map((lvl, i) => (
-                <div
-                  key={`ask-${i}`}
-                  className="ob-row ask"
-                  style={{ '--depth': `${(lvl.total / maxAskTotal) * 100}%` }}
-                  title={`Ask ${fmt(lvl.price)} × ${fmtQty(lvl.quantity)}`}
-                >
-                  <span className="ob-price">{fmt(lvl.price)}</span>
-                  <span className="ob-qty">{fmtQty(lvl.quantity)}</span>
-                  <span className="ob-total">{fmtQty(lvl.total)}</span>
-                </div>
+                <OrderBookRow
+                  key={`ask-${lvl.price}`}
+                  lvl={lvl}
+                  isBid={false}
+                  maxTotal={maxAskTotal}
+                  fmt={fmt}
+                  fmtQty={fmtQty}
+                />
               ))
             )}
           </div>
