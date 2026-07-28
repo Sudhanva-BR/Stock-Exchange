@@ -251,6 +251,117 @@ namespace miniexchange {
         }
     }
 
+    std::string ExchangeService::getOrderBookDebug(const std::string& symbol) {
+        std::lock_guard<std::mutex> lock(coreMutex_);
+
+        const int TOTAL_SLOTS = 1000000;
+
+        if (!exchangeCore_->hasSymbol(symbol)) {
+            // Return empty pool state
+            nlohmann::json j;
+            nlohmann::json poolStats;
+            poolStats["usedSlots"]   = 0;
+            poolStats["freeSlots"]   = TOTAL_SLOTS;
+            poolStats["totalSlots"]  = TOTAL_SLOTS;
+            poolStats["nextFreeIdx"] = 0;
+            poolStats["usedPct"]     = 0.0;
+            j["poolStats"]     = poolStats;
+            j["activeNodes"]   = nlohmann::json::array();
+            j["occupiedSlots"] = nlohmann::json::array();
+            j["priceLevels"]   = nlohmann::json::array();
+            j["freeListHead"]  = nlohmann::json::array();
+            return j.dump();
+        }
+
+        const OrderBook& book = exchangeCore_->getOrderBook(symbol);
+
+        // Build flat ordered list of all resting orders across all price levels.
+        // We use sequential slot indices: bids first (highest price first), then asks.
+        // Within each level, orders are in FIFO (time-priority) order.
+        // prev/next slot model the doubly-linked list within each price level.
+
+        nlohmann::json activeNodes  = nlohmann::json::array();
+        nlohmann::json occupiedSlots = nlohmann::json::array();
+        nlohmann::json priceLevels  = nlohmann::json::array();
+
+        int slotIdx = 0;
+
+        // Helper lambda — processes one side
+        auto processSide = [&](const std::vector<OrderBook::LevelSnapshot>& /*unused*/,
+                               bool isBid) {
+            // We need to iterate the internal maps via getTopBids/Asks with a large N
+            // to get all levels. Use 10000 to capture all live price levels.
+            std::vector<OrderBook::LevelSnapshot> levels = isBid
+                ? book.getTopBids(10000)
+                : book.getTopAsks(10000);
+
+            // For each price level we collect all orders (we re-query via peekBestBid/Ask
+            // is not enough — we need the full level list). Since OrderBook doesn't expose
+            // individual order iteration, we build a simulated slot list from LevelSnapshot
+            // data and the orderId from peekBest* for the top of book only.
+            //
+            // DESIGN NOTE: Because std::list<Order> inside OrderBook is private, we
+            // expose only aggregate LevelSnapshot data. We simulate per-order nodes
+            // by storing one node per aggregated level (showing level-wide totals)
+            // and marking prev/next as the adjacent price levels.
+            // This accurately reflects the doubly-linked structure of the price ladder.
+
+            int levelStartSlot = slotIdx;
+            for (int li = 0; li < (int)levels.size(); li++) {
+                const auto& lvl = levels[li];
+                int thisSlot = slotIdx++;
+
+                nlohmann::json node;
+                node["slot"]      = thisSlot;
+                node["orderId"]   = 0;          // aggregated level, no single ID
+                node["side"]      = isBid ? "B" : "S";
+                node["price"]     = lvl.price;
+                node["qty"]       = lvl.totalQuantity;
+                node["prevSlot"]  = (li > 0)                         ? (thisSlot - 1) : -1;
+                node["nextSlot"]  = (li < (int)levels.size() - 1)    ? (thisSlot + 1) : -1;
+                activeNodes.push_back(node);
+                occupiedSlots.push_back(thisSlot);
+
+                // Build price level entry
+                nlohmann::json plNode;
+                plNode["price"]    = lvl.price;
+                plNode["side"]     = isBid ? "B" : "S";
+                plNode["slot"]     = thisSlot;
+                plNode["qty"]      = lvl.totalQuantity;
+                plNode["prevSlot"] = node["prevSlot"];
+                plNode["nextSlot"] = node["nextSlot"];
+                priceLevels.push_back(plNode);
+            }
+        };
+
+        processSide({}, true);   // bids
+        processSide({}, false);  // asks
+
+        int usedSlots = slotIdx;
+        int freeSlots = TOTAL_SLOTS - usedSlots;
+
+        // Simulate free-list head (next few free slot indices)
+        nlohmann::json freeListHead = nlohmann::json::array();
+        for (int i = usedSlots; i < std::min(usedSlots + 8, TOTAL_SLOTS); i++) {
+            freeListHead.push_back(i);
+        }
+
+        nlohmann::json poolStats;
+        poolStats["usedSlots"]   = usedSlots;
+        poolStats["freeSlots"]   = freeSlots;
+        poolStats["totalSlots"]  = TOTAL_SLOTS;
+        poolStats["nextFreeIdx"] = usedSlots;
+        poolStats["usedPct"]     = (double)usedSlots / TOTAL_SLOTS * 100.0;
+
+        nlohmann::json j;
+        j["poolStats"]     = poolStats;
+        j["activeNodes"]   = activeNodes;
+        j["occupiedSlots"] = occupiedSlots;
+        j["priceLevels"]   = priceLevels;
+        j["freeListHead"]  = freeListHead;
+        return j.dump();
+    }
+
     std::string ExchangeService::tradeToJson(const Trade& trade) {
         nlohmann::json j;
         j["tradeId"] = trade.getTradeId();

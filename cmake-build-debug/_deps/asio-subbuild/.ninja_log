@@ -1,0 +1,21 @@
+# ninja log v6
+6	119	8066800974559870	asio-populate-prefix/src/asio-populate-stamp/asio-populate-mkdir	7d29ce2046d54667
+6	119	8066800974559870	C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-mkdir	7d29ce2046d54667
+120	19093	8066801164259394	asio-populate-prefix/src/asio-populate-stamp/asio-populate-download	c2326eeb4a2b9819
+120	19093	8066801164259394	C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-download	c2326eeb4a2b9819
+19094	19232	8066801165639557	asio-populate-prefix/src/asio-populate-stamp/asio-populate-update	d17638393234c94c
+19094	19232	8066801165639557	C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-update	d17638393234c94c
+19235	19371	8066801167063634	asio-populate-prefix/src/asio-populate-stamp/asio-populate-patch	fd72a01814f7b547
+19235	19371	8066801167063634	C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-patch	fd72a01814f7b547
+19371	19506	8066801168424842	asio-populate-prefix/src/asio-populate-stamp/asio-populate-configure	ee595a2d2b8d6e5c
+19371	19506	8066801168424842	C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-configure	ee595a2d2b8d6e5c
+19507	19642	8066801169773719	asio-populate-prefix/src/asio-populate-stamp/asio-populate-build	8973c76ab62fd551
+19507	19642	8066801169773719	C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-build	8973c76ab62fd551
+19643	19758	8066801170965105	asio-populate-prefix/src/asio-populate-stamp/asio-populate-install	47e7e32ec2c5d2e4
+19643	19758	8066801170965105	C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-install	47e7e32ec2c5d2e4
+19759	19859	8066801171959859	asio-populate-prefix/src/asio-populate-stamp/asio-populate-test	e3e9f699c45bb4b
+19759	19859	8066801171959859	C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-test	e3e9f699c45bb4b
+19859	19976	8066801173135755	CMakeFiles/asio-populate-complete	b8353914ad8e4002
+19859	19976	8066801173135755	asio-populate-prefix/src/asio-populate-stamp/asio-populate-done	b8353914ad8e4002
+19859	19976	8066801173135755	C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/CMakeFiles/asio-populate-complete	b8353914ad8e4002
+19859	19976	8066801173135755	C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-done	b8353914ad8e4002

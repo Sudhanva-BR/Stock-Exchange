@@ -1,0 +1,21 @@
+# ninja log v6
+5	139	8066800949240689	json-populate-prefix/src/json-populate-stamp/json-populate-mkdir	5052584526b6b24
+5	139	8066800949240689	C:/Mini Exchange/cmake-build-debug/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-mkdir	5052584526b6b24
+140	1436	8066800962204612	json-populate-prefix/src/json-populate-stamp/json-populate-download	1068b38a23a956d0
+140	1436	8066800962204612	C:/Mini Exchange/cmake-build-debug/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-download	1068b38a23a956d0
+1436	1523	8066800963066817	json-populate-prefix/src/json-populate-stamp/json-populate-update	a145703de829dc8a
+1436	1523	8066800963066817	C:/Mini Exchange/cmake-build-debug/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-update	a145703de829dc8a
+1524	1600	8066800963857712	json-populate-prefix/src/json-populate-stamp/json-populate-patch	2f1af7f7b0b3b79a
+1524	1600	8066800963857712	C:/Mini Exchange/cmake-build-debug/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-patch	2f1af7f7b0b3b79a
+1600	1669	8066800964561430	json-populate-prefix/src/json-populate-stamp/json-populate-configure	4a7a54d693d43beb
+1600	1669	8066800964561430	C:/Mini Exchange/cmake-build-debug/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-configure	4a7a54d693d43beb
+1670	1759	8066800965413201	json-populate-prefix/src/json-populate-stamp/json-populate-build	7b3335d9e89e1c45
+1670	1759	8066800965413201	C:/Mini Exchange/cmake-build-debug/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-build	7b3335d9e89e1c45
+1759	1847	8066800966329818	json-populate-prefix/src/json-populate-stamp/json-populate-install	8f465783df0ae2d9
+1759	1847	8066800966329818	C:/Mini Exchange/cmake-build-debug/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-install	8f465783df0ae2d9
+1847	1918	8066800966960041	json-populate-prefix/src/json-populate-stamp/json-populate-test	298f89befc725ca3
+1847	1918	8066800966960041	C:/Mini Exchange/cmake-build-debug/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-test	298f89befc725ca3
+1918	2030	8066800968156740	CMakeFiles/json-populate-complete	57b39adf3473556c
+1918	2030	8066800968156740	json-populate-prefix/src/json-populate-stamp/json-populate-done	57b39adf3473556c
+1918	2030	8066800968156740	C:/Mini Exchange/cmake-build-debug/_deps/json-subbuild/CMakeFiles/json-populate-complete	57b39adf3473556c
+1918	2030	8066800968156740	C:/Mini Exchange/cmake-build-debug/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-done	57b39adf3473556c

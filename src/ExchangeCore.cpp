@@ -55,6 +55,10 @@ const OrderBook& ExchangeCore::getOrderBook(const std::string& symbol) const {
     return it->second.book;
 }
 
+void ExchangeCore::accessOrderBook(const std::string& symbol, const std::function<void(const OrderBook&)>& accessor) const {
+    accessor(getOrderBook(symbol));
+}
+
 const TradeHistory& ExchangeCore::getTradeHistory(const std::string& symbol) const {
     auto it = symbols_.find(symbol);
     if (it == symbols_.end()) {

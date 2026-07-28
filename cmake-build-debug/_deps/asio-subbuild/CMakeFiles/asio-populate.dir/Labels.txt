@@ -1,0 +1,14 @@
+# Target labels
+ asio-populate
+# Source files and their labels
+C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/CMakeFiles/asio-populate
+C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/CMakeFiles/asio-populate.rule
+C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/CMakeFiles/asio-populate-complete.rule
+C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-build.rule
+C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-configure.rule
+C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-download.rule
+C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-install.rule
+C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-mkdir.rule
+C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-patch.rule
+C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-test.rule
+C:/Mini Exchange/cmake-build-debug/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-update.rule

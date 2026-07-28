@@ -1,0 +1,3 @@
+C:/Mini Exchange/cmake-build-debug/_deps/crow-subbuild/CMakeFiles/crow-populate.dir
+C:/Mini Exchange/cmake-build-debug/_deps/crow-subbuild/CMakeFiles/edit_cache.dir
+C:/Mini Exchange/cmake-build-debug/_deps/crow-subbuild/CMakeFiles/rebuild_cache.dir

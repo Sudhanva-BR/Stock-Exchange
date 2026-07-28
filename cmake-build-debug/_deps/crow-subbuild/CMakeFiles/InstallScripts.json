@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Mini Exchange/cmake-build-debug/_deps/crow-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,2 @@
+G__~1.EXE: fatal error: input file 'C:/Mini' is the same as output file
+compilation terminated.

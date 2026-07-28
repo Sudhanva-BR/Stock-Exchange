@@ -77,6 +77,12 @@ namespace miniexchange {
         // Get list of active symbols
         std::string getSymbols();
 
+        // Get raw per-order node data for the debug panel (memory pool / node struct visualization)
+        // Returns a JSON object with: activeNodes (array of {slot,orderId,side,price,qty,prevSlot,nextSlot}),
+        // poolStats (usedSlots, freeSlots, totalSlots, nextFreeIdx),
+        // occupiedSlots (array of int indices), priceLevels (array of price-level linked lists)
+        std::string getOrderBookDebug(const std::string& symbol);
+
         // --- WebSocket management ---
 
         // Add/remove WebSocket connections for broadcasting

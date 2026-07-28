@@ -149,6 +149,17 @@ int main(int argc, char* argv[]) {
         return crow::response(200, symbols);
     });
 
+    // GET /api/debug/orderbook/<symbol> - Get raw node / memory-pool debug data
+    CROW_ROUTE(app, "/api/debug/orderbook/<string>")
+        .methods("GET"_method)
+    ([&exchangeService](const std::string& symbol) {
+        std::string debug = exchangeService->getOrderBookDebug(symbol);
+        crow::response res(200, debug);
+        res.add_header("Content-Type", "application/json");
+        return res;
+    });
+
+
     // ---------------------------------------------------------------------------
     // WebSocket Route
     // ---------------------------------------------------------------------------

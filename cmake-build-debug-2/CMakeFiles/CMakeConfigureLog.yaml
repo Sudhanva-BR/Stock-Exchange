@@ -1,0 +1,1691 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      g++.exe: error: unrecognized command-line option '--c++'
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      g++.exe: error: unrecognized command-line option '--ec++'; did you mean '-Weffc++'?
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      g++.exe: warning: '-mcpu=' is deprecated; use '-mtune=' or '-march=' instead
+      g++.exe: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      g++.exe: error: unrecognized command-line option '--c++'
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      g++.exe: error: unrecognized command-line option '--ec++'; did you mean '-Weffc++'?
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      g++.exe: warning: '-mcpu=' is deprecated; use '-mtune=' or '-march=' instead
+      g++.exe: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:1303 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      g++.exe: fatal error: no input files
+      compilation terminated.
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:1303 (message)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      g++.exe: fatal error: no input files
+      compilation terminated.
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/MinGW/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/"
+      - "C:/bin/"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/sudha/AppData/Local/Python/bin/"
+      - "C:/Users/sudha/AppData/Roaming/npm/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/cursor/resources/app/bin/"
+      - "C:/Devin/bin/"
+    searched_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/ar.com"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/MinGW/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/"
+      - "C:/bin/"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/sudha/AppData/Local/Python/bin/"
+      - "C:/Users/sudha/AppData/Roaming/npm/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/cursor/resources/app/bin/"
+      - "C:/Devin/bin/"
+    searched_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/ranlib.com"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/MinGW/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/"
+      - "C:/bin/"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/sudha/AppData/Local/Python/bin/"
+      - "C:/Users/sudha/AppData/Roaming/npm/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/cursor/resources/app/bin/"
+      - "C:/Devin/bin/"
+    searched_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/strip.com"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/strip.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/MinGW/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/"
+      - "C:/bin/"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/sudha/AppData/Local/Python/bin/"
+      - "C:/Users/sudha/AppData/Roaming/npm/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/cursor/resources/app/bin/"
+      - "C:/Devin/bin/"
+    searched_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/ld.com"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/ld.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/MinGW/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/"
+      - "C:/bin/"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/sudha/AppData/Local/Python/bin/"
+      - "C:/Users/sudha/AppData/Roaming/npm/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/cursor/resources/app/bin/"
+      - "C:/Devin/bin/"
+    searched_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/nm.com"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/nm.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/MinGW/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/"
+      - "C:/bin/"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/sudha/AppData/Local/Python/bin/"
+      - "C:/Users/sudha/AppData/Roaming/npm/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/cursor/resources/app/bin/"
+      - "C:/Devin/bin/"
+    searched_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/objdump.com"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/objdump.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/MinGW/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/"
+      - "C:/bin/"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/sudha/AppData/Local/Python/bin/"
+      - "C:/Users/sudha/AppData/Roaming/npm/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/cursor/resources/app/bin/"
+      - "C:/Devin/bin/"
+    searched_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/objcopy.com"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/objcopy.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/MinGW/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/"
+      - "C:/bin/"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/sudha/AppData/Local/Python/bin/"
+      - "C:/Users/sudha/AppData/Roaming/npm/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/cursor/resources/app/bin/"
+      - "C:/Devin/bin/"
+    searched_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/readelf.com"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/readelf.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/MinGW/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/"
+      - "C:/bin/"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/sudha/AppData/Local/Python/bin/"
+      - "C:/Users/sudha/AppData/Roaming/npm/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/cursor/resources/app/bin/"
+      - "C:/Devin/bin/"
+    searched_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/dlltool.com"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/dlltool.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/MinGW/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/"
+      - "C:/bin/"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/sudha/AppData/Local/Python/bin/"
+      - "C:/Users/sudha/AppData/Roaming/npm/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/cursor/resources/app/bin/"
+      - "C:/Devin/bin/"
+    searched_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/addr2line.com"
+    found: "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/addr2line.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/MinGW/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/"
+      - "C:/bin/"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/sudha/AppData/Local/Python/bin/"
+      - "C:/Users/sudha/AppData/Roaming/npm/"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/cursor/resources/app/bin/"
+      - "C:/Devin/bin/"
+    searched_directories:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/tapi.com"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/tapi.exe"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/tapi"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/tapi.com"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/tapi.exe"
+      - "C:/Users/sudha/.gemini/antigravity-ide/bin/tapi"
+      - "C:/Windows/System32/tapi.com"
+      - "C:/Windows/System32/tapi.exe"
+      - "C:/Windows/System32/tapi"
+      - "C:/Windows/tapi.com"
+      - "C:/Windows/tapi.exe"
+      - "C:/Windows/tapi"
+      - "C:/Windows/System32/wbem/tapi.com"
+      - "C:/Windows/System32/wbem/tapi.exe"
+      - "C:/Windows/System32/wbem/tapi"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi"
+      - "C:/Windows/System32/OpenSSH/tapi.com"
+      - "C:/Windows/System32/OpenSSH/tapi.exe"
+      - "C:/Windows/System32/OpenSSH/tapi"
+      - "C:/MinGW/bin/tapi.com"
+      - "C:/MinGW/bin/tapi.exe"
+      - "C:/MinGW/bin/tapi"
+      - "C:/Program Files/nodejs/tapi.com"
+      - "C:/Program Files/nodejs/tapi.exe"
+      - "C:/Program Files/nodejs/tapi"
+      - "C:/Program Files/Docker/Docker/resources/bin/tapi.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/tapi.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/tapi"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/tapi.com"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/tapi.exe"
+      - "C:/Users/sudha/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python/Python 3.14/tapi"
+      - "C:/bin/tapi.com"
+      - "C:/bin/tapi.exe"
+      - "C:/bin/tapi"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/tapi.com"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/tapi.exe"
+      - "C:/Users/sudha/AppData/Local/Microsoft/WindowsApps/tapi"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/tapi.com"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/tapi.exe"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/tapi"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/tapi.com"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/tapi.exe"
+      - "C:/Users/sudha/AppData/Local/Programs/Microsoft VS Code/bin/tapi"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/tapi.com"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/tapi.exe"
+      - "C:/Users/sudha/AppData/Local/Programs/Git/cmd/tapi"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/tapi.com"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/tapi.exe"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity/bin/tapi"
+      - "C:/Users/sudha/AppData/Local/Python/bin/tapi.com"
+      - "C:/Users/sudha/AppData/Local/Python/bin/tapi.exe"
+      - "C:/Users/sudha/AppData/Local/Python/bin/tapi"
+      - "C:/Users/sudha/AppData/Roaming/npm/tapi.com"
+      - "C:/Users/sudha/AppData/Roaming/npm/tapi.exe"
+      - "C:/Users/sudha/AppData/Roaming/npm/tapi"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/tapi.com"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/tapi.exe"
+      - "C:/Users/sudha/AppData/Local/Programs/Antigravity IDE/bin/tapi"
+      - "C:/cursor/resources/app/bin/tapi.com"
+      - "C:/cursor/resources/app/bin/tapi.exe"
+      - "C:/cursor/resources/app/bin/tapi"
+      - "C:/Devin/bin/tapi.com"
+      - "C:/Devin/bin/tapi.exe"
+      - "C:/Devin/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:/Users/sudha/.gemini/antigravity-ide/bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\MinGW\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14"
+        - "C:\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Git\\cmd"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\sudha\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\sudha\\AppData\\Roaming\\npm"
+        - "C:\\Users\\sudha\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\cursor\\resources\\app\\bin"
+        - "C:\\Devin\\bin"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "M:/cmake-build-debug-2/CMakeFiles/CMakeScratch/TryCompile-ghpmg6"
+      binary: "M:/cmake-build-debug-2/CMakeFiles/CMakeScratch/TryCompile-ghpmg6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'M:/cmake-build-debug-2/CMakeFiles/CMakeScratch/TryCompile-ghpmg6'
+        
+        Run Build Command(s): "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/ninja/win/x64/ninja.exe" -v cmTC_c49f3
+        [1/2] C:\\Users\\sudha\\OneDrive\\Desktop\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE    -o CMakeFiles\\cmTC_c49f3.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin\\cmake\\win\\x64\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+        FAILED: CMakeFiles/cmTC_c49f3.dir/CMakeCXXCompilerABI.cpp.obj 
+        C:\\Users\\sudha\\OneDrive\\Desktop\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE    -o CMakeFiles\\cmTC_c49f3.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Users\\sudha\\OneDrive\\Desktop\\CLion 2025.3.1\\bin\\cmake\\win\\x64\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Check for working CXX compiler: C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/mingw/bin/g++.exe"
+    directories:
+      source: "M:/cmake-build-debug-2/CMakeFiles/CMakeScratch/TryCompile-5jffg8"
+      binary: "M:/cmake-build-debug-2/CMakeFiles/CMakeScratch/TryCompile-5jffg8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'M:/cmake-build-debug-2/CMakeFiles/CMakeScratch/TryCompile-5jffg8'
+        
+        Run Build Command(s): "C:/Users/sudha/OneDrive/Desktop/CLion 2025.3.1/bin/ninja/win/x64/ninja.exe" -v cmTC_ab054
+        [1/2] C:\\Users\\sudha\\OneDrive\\Desktop\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE    -o CMakeFiles\\cmTC_ab054.dir\\testCXXCompiler.cxx.obj -c M:\\cmake-build-debug-2\\CMakeFiles\\CMakeScratch\\TryCompile-5jffg8\\testCXXCompiler.cxx
+        FAILED: CMakeFiles/cmTC_ab054.dir/testCXXCompiler.cxx.obj 
+        C:\\Users\\sudha\\OneDrive\\Desktop\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE    -o CMakeFiles\\cmTC_ab054.dir\\testCXXCompiler.cxx.obj -c M:\\cmake-build-debug-2\\CMakeFiles\\CMakeScratch\\TryCompile-5jffg8\\testCXXCompiler.cxx
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...

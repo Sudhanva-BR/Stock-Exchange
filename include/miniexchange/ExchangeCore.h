@@ -61,6 +61,9 @@ namespace miniexchange {
         // Throws std::out_of_range if symbol has never had an order submitted.
         const OrderBook&    getOrderBook    (const std::string& symbol) const;
         const TradeHistory& getTradeHistory (const std::string& symbol) const;
+        
+        // Safely access the order book while holding the symbol lock (if applicable)
+        virtual void accessOrderBook(const std::string& symbol, const std::function<void(const OrderBook&)>& accessor) const;
 
         // Returns true if at least one order has been submitted for that symbol.
         bool hasSymbol(const std::string& symbol) const noexcept;

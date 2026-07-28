@@ -6,6 +6,8 @@ import TradeTape from './components/TradeTape'
 import OrderEntryForm from './components/OrderEntryForm'
 import OBIPanel from './components/OBIPanel'
 import LatencyDashboard from './components/LatencyDashboard'
+import MemoryPoolPanel from './components/MemoryPoolPanel'
+import NodeDataPanel from './components/NodeDataPanel'
 import './App.css'
 
 const DEFAULT_SYMBOLS = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'TSLA']
@@ -59,6 +61,13 @@ function App() {
   const [wsConnected, setWsConnected] = useState(false)
   const [orderBook, setOrderBook] = useState({ bids: [], asks: [] })
   const [trades, setTrades]       = useState([])
+  const [debugData, setDebugData] = useState({
+     poolStats: { usedSlots: 0, freeSlots: 1000000, nextFreeIdx: 0, usedPct: 0 },
+     occupiedSlots: [],
+     activeNodes: [],
+     priceLevels: [],
+     freeListHead: [0, 1, 2, 3, 4, 5, 6, 7]
+  })
   
   // HFT UI States
   const [symbolPriceData, setSymbolPriceData] = useState({}) // { AAPL: { lastPrice, changePct, prices: [], flashKey, flashDir } }
@@ -68,6 +77,7 @@ function App() {
   const [showVwap, setShowVwap] = useState(false)
   const [simRunning, setSimRunning] = useState(false)
   const [latencyMs, setLatencyMs] = useState(null)
+  const [currentView, setCurrentView] = useState('trading')
   
   const wsRef           = useRef(null)
   const simRef          = useRef(null)
@@ -129,6 +139,15 @@ function App() {
       const totalA = obAsks.reduce((s, l) => s + (l.quantity || 0), 0)
       const obi = totalB + totalA > 0 ? (totalB - totalA) / (totalB + totalA) : 0
       setObiHistory(prev => [...prev, obi].slice(-60))
+    } catch { }
+  }, [])
+
+  const fetchDebugData = useCallback(async (symbol) => {
+    try {
+      const res = await fetch(`/api/debug/orderbook/${symbol}`)
+      if (!res.ok) return
+      const data = await res.json()
+      setDebugData(data)
     } catch { }
   }, [])
 
@@ -203,16 +222,16 @@ function App() {
        
        // Handle Candle closing
        if (currentCandleRef.current) {
-           setCandles(prev => [...prev, currentCandleRef.current].slice(-60))
-           // Start new candle with last close as open
            const c = currentCandleRef.current
-           const timeStr = new Date().toLocaleTimeString('en-US', { hour12: false, hour:'2-digit', minute:'2-digit', second:'2-digit'})
+           const timeStr = new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' })
+           setCandles(prev => [...prev, { ...c, time: timeStr }].slice(-60))
            currentCandleRef.current = { open: c.close, high: c.close, low: c.close, close: c.close, time: timeStr }
        }
        
+       fetchDebugData(selectedSymbol)
     }, 1000)
     return () => clearInterval(id)
-  }, [])
+  }, [selectedSymbol, fetchDebugData])
 
   // ── WebSocket ────
   useEffect(() => {
@@ -257,6 +276,7 @@ function App() {
 
           } else if (msg.type === 'orderbook_update' && msg.symbol === selectedSymbol) {
             fetchOrderBook(selectedSymbol)
+            fetchDebugData(selectedSymbol)
           }
           
           // Always update symbolPriceData for Watchlist (even if not selected, if feed provided it)
@@ -293,13 +313,14 @@ function App() {
       clearTimeout(reconnectTimer)
       wsRef.current?.close()
     }
-  }, [selectedSymbol, fetchOrderBook, avgTradeSize])
+  }, [selectedSymbol, fetchOrderBook, fetchDebugData, avgTradeSize])
 
   // ── Initial data ──────────────────────────────────────────────
   useEffect(() => {
     fetchSymbols()
     fetchOrderBook(selectedSymbol)
     fetchTrades(selectedSymbol)
+    fetchDebugData(selectedSymbol)
   }, []) // eslint-disable-line
 
   // ── Symbol switch ─────────────────────────────────────────────
@@ -311,10 +332,11 @@ function App() {
     currentCandleRef.current = null
     fetchOrderBook(symbol)
     fetchTrades(symbol)
+    fetchDebugData(symbol)
     if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
       wsRef.current.send(JSON.stringify({ subscribe: symbol }))
     }
-  }, [fetchOrderBook, fetchTrades])
+  }, [fetchOrderBook, fetchTrades, fetchDebugData])
 
   // ── Order submit with latency tracking ───────────────────────
   const handleOrderSubmit = useCallback(async (orderData) => {
@@ -455,6 +477,13 @@ function App() {
         />
 
         {/* Dashboard grid */}
+        
+        <div className="tab-container" style={{ padding: '0 16px 12px 16px', display: 'flex', gap: '8px' }}>
+           <button className={`tab-btn ${currentView === 'trading' ? 'active' : ''}`} onClick={() => setCurrentView('trading')} style={{ padding: '8px 16px', borderRadius: '4px', background: currentView === 'trading' ? 'var(--bg-accent)' : 'var(--bg-panel)', color: '#fff', border: 'none', cursor: 'pointer' }}>Trading Dashboard</button>
+           <button className={`tab-btn ${currentView === 'debug' ? 'active' : ''}`} onClick={() => setCurrentView('debug')} style={{ padding: '8px 16px', borderRadius: '4px', background: currentView === 'debug' ? 'var(--bg-accent)' : 'var(--bg-panel)', color: '#fff', border: 'none', cursor: 'pointer' }}>Memory Pool &amp; Nodes</button>
+        </div>
+
+        {currentView === 'trading' ? (
         <div className="hft-dashboard-grid">
           
           {/* Middle-Left: Candlestick Chart & Tape */}
@@ -480,7 +509,6 @@ function App() {
                  <span className="card-badge live">Live</span>
                </div>
                <div className="card-body">
-                 {/* Re-use TradeTape but maybe restyle large sizes via CSS (impl in CSS) */}
                  <TradeTape trades={trades} avgTradeSize={avgTradeSize} />
                </div>
              </section>
@@ -532,6 +560,12 @@ function App() {
              </section>
           </div>
         </div>
+        ) : (
+        <div className="debug-dashboard-grid" style={{ padding: '0 16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+           <MemoryPoolPanel debugData={debugData} />
+           <NodeDataPanel debugData={debugData} />
+        </div>
+        )}
       </main>
     </div>
   )

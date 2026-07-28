@@ -1,0 +1,5 @@
+if(EXISTS "C:/Mini Exchange/cmake-build-debug/tests/TestCancelModify[1]_tests.cmake")
+  include("C:/Mini Exchange/cmake-build-debug/tests/TestCancelModify[1]_tests.cmake")
+else()
+  add_test(TestCancelModify_NOT_BUILT TestCancelModify_NOT_BUILT)
+endif()

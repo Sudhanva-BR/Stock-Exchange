@@ -1,0 +1,21 @@
+# ninja log v6
+3	104	8066801199942899	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	e3be87cb228fd134
+3	104	8066801199942899	C:/Mini Exchange/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	e3be87cb228fd134
+105	2376	8066801222621284	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	70d24f46148daf7f
+105	2376	8066801222621284	C:/Mini Exchange/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	70d24f46148daf7f
+2377	2454	8066801223441993	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	e1f1bc58818fb3f9
+2377	2454	8066801223441993	C:/Mini Exchange/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	e1f1bc58818fb3f9
+2454	2527	8066801224164882	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	fe72f40b2cb12a11
+2454	2527	8066801224164882	C:/Mini Exchange/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	fe72f40b2cb12a11
+2527	2594	8066801224848855	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	b828d1ccf738473e
+2527	2594	8066801224848855	C:/Mini Exchange/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	b828d1ccf738473e
+2595	2663	8066801225544078	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	df355ef9209171f9
+2595	2663	8066801225544078	C:/Mini Exchange/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	df355ef9209171f9
+2663	2735	8066801226254317	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	b858561f1c9b2b6d
+2663	2735	8066801226254317	C:/Mini Exchange/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	b858561f1c9b2b6d
+2735	2805	8066801226959267	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	34d070d701d8fd88
+2735	2805	8066801226959267	C:/Mini Exchange/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	34d070d701d8fd88
+2805	2904	8066801227957359	CMakeFiles/googletest-populate-complete	a11bde559437006e
+2805	2904	8066801227957359	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	a11bde559437006e
+2805	2904	8066801227957359	C:/Mini Exchange/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	a11bde559437006e
+2805	2904	8066801227957359	C:/Mini Exchange/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	a11bde559437006e

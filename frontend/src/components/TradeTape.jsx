@@ -34,12 +34,6 @@ function TradeTape({ trades }) {
 
   return (
     <div className="tape-list" role="log" aria-label="Trade tape" aria-live="polite">
-      {/* Sticky column headers */}
-      <div className="tape-col-headers">
-        <span>Price</span>
-        <span className="col-right">Qty</span>
-        <span className="col-right">Time</span>
-      </div>
 
       {trades.length === 0 ? (
         <div className="tape-empty">
@@ -50,13 +44,13 @@ function TradeTape({ trades }) {
         trades.slice(0, MAX_TRADES).map((trade, index) => {
           const dir = getDirection(index)
           return (
-            <div key={trade.tradeId ?? `trade-${index}`} className="tape-row">
-              <span className={`tape-price ${dir}`}>
-                <span className="tape-arrow">{ARROW[dir]}</span>
-                {fmtPrice(trade.price)}
-              </span>
-              <span className="tape-qty">{fmtQty(trade.quantity)}</span>
-              <span className="tape-time">{formatTime(trade.timestamp)}</span>
+            <div key={trade.tradeId ?? `trade-${index}`} className="tape-row-card">
+              <div className="tape-row-header">
+                 <span className={`tape-badge ${dir}`}>FILL</span>
+              </div>
+              <div className="tape-row-body">
+                 Matched {trade.buyOrderId} &amp; {trade.sellOrderId} | {fmtQty(trade.quantity)} shares @ ${fmtPrice(trade.price)}
+              </div>
             </div>
           )
         })
