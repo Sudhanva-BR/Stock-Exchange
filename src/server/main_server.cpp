@@ -68,11 +68,17 @@ int main(int argc, char* argv[]) {
     // ---------------------------------------------------------------------------
 
     // Explicit OPTIONS handler for all /api/ routes to prevent Crow's default router
-    // from short-circuiting the CORSHandler middleware.
+    // from short-circuiting or rejecting preflights. We manually inject headers and return 200
+    // to avoid proxy (Render) 502 issues with 204 No Content.
     CROW_ROUTE(app, "/api/<path>")
         .methods("OPTIONS"_method)
     ([](std::string /*path*/) {
-        return crow::response(204);
+        crow::response res(200);
+        res.add_header("Access-Control-Allow-Origin", "*");
+        res.add_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        res.add_header("Access-Control-Allow-Headers", "Content-Type, Authorization, Access-Control-Allow-Origin");
+        res.add_header("Access-Control-Max-Age", "86400"); // Cache preflight for 24 hours
+        return res;
     });
 
     // Health check endpoints — no method restriction so HEAD/GET both match.
