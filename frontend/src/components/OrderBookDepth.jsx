@@ -53,8 +53,8 @@ function OrderBookDepth({ orderBook }) {
     })
   }, [asks])
 
-  const maxBidTotal = bidsWithTotal.at(-1)?.total || 1
-  const maxAskTotal = asksWithTotal.at(-1)?.total || 1
+  const maxBidTotal = bidsWithTotal.length > 0 ? bidsWithTotal[bidsWithTotal.length - 1].total : 1;
+  const maxAskTotal = asksWithTotal.length > 0 ? asksWithTotal[asksWithTotal.length - 1].total : 1;
 
   // Spread calculation
   const bestBid = bids[0]?.price
