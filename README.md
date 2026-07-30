@@ -1,5 +1,7 @@
 # Mini Stock Exchange & HFT Terminal
 
+**GitHub Repository:** [https://github.com/Sudhanva-BR/Stock-Exchange](https://github.com/Sudhanva-BR/Stock-Exchange)
+
 A production-grade, high-performance multi-symbol order matching engine written in **C++20**, paired with an institutional-style **React + Vite HFT Terminal Dashboard**.
 
 This project demonstrates low-latency exchange architecture: price-time priority matching, O(1) order cancellation, thread-safe concurrent processing, WebSocket/REST API integration via Crow C++, and custom SVG visualization components for real-time order book, trades, candlestick analytics, and latency telemetry.
@@ -21,6 +23,8 @@ This project demonstrates low-latency exchange architecture: price-time priority
 - **Order Book Depth View**: Side-by-side bids & asks depth table with animated quantity change flash overlays.
 - **Order Book Imbalance (OBI) Panel**: Dynamic gauge meter showing buy/sell liquidity pressure alongside a 60-second historical trend chart.
 - **Performance & Latency Monitor**: Real-time telemetry tracking REST p50/p99 round-trip latencies, Orders/sec (OPS), and Trades/sec (TPS).
+- **Memory & Node Analysis**: Visualizers for the memory pool state and raw order node data to inspect backend efficiency.
+- **System Notifications & Navigation**: Symbol dropdown selector for quick switching and a toast notification system for real-time alerts.
 - **Market Simulator**: Embedded high-frequency order flow simulator to stress-test matching & UI rendering.
 
 ---
@@ -110,7 +114,11 @@ Mini Exchange/
 │   │   │   ├── OBIPanel.jsx        # Order Book Imbalance gauge & history graph
 │   │   │   ├── LatencyDashboard.jsx# Real-time p50/p99 & OPS/TPS telemetry
 │   │   │   ├── OrderEntryForm.jsx  # Order execution interface
-│   │   │   └── TradeTape.jsx       # Real-time execution stream
+│   │   │   ├── TradeTape.jsx       # Real-time execution stream
+│   │   │   ├── MemoryPoolPanel.jsx # Memory pool visualization
+│   │   │   ├── NodeDataPanel.jsx   # Raw order node data viewer
+│   │   │   ├── SymbolSelector.jsx  # Symbol dropdown selector
+│   │   │   └── AlertToasts.jsx     # Notification toast messages
 │   │   ├── App.jsx                 # Central state orchestrator
 │   │   └── index.css               # Dark-mode terminal design system
 ├── tests/                          # GoogleTest unit test suites (42 test cases)
