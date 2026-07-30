@@ -32,31 +32,6 @@ struct PathNormalizer {
     void after_handle(crow::request& /*req*/, crow::response& /*res*/, context& /*ctx*/) {}
 };
 
-// ---------------------------------------------------------------------------
-// CorsMiddleware
-// Explicitly handles CORS preflight and adds headers to all responses.
-// ---------------------------------------------------------------------------
-struct CorsMiddleware {
-    struct context {};
-
-    void before_handle(crow::request& req, crow::response& res, context& /*ctx*/) {
-        if (req.method == crow::HTTPMethod::OPTIONS) {
-            res.code = 204;
-            res.add_header("Access-Control-Allow-Origin", "*");
-            res.add_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-            res.add_header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-            res.add_header("Access-Control-Max-Age", "3600");
-            res.end();
-        }
-    }
-
-    void after_handle(crow::request& /*req*/, crow::response& res, context& /*ctx*/) {
-        res.add_header("Access-Control-Allow-Origin", "*");
-        res.add_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-        res.add_header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    }
-};
-
 int main(int argc, char* argv[]) {
     // Parse command line arguments for port
     int port = 8080;
@@ -77,12 +52,28 @@ int main(int argc, char* argv[]) {
     auto exchangeService = std::make_unique<miniexchange::ExchangeService>();
     exchangeService->start();
 
-    // Create Crow app with PathNormalizer and custom CorsMiddleware
-    crow::App<PathNormalizer, CorsMiddleware> app;
+    // Create Crow app with PathNormalizer and built-in CORSHandler
+    crow::App<PathNormalizer, crow::CORSHandler> app;
+
+    // Configure CORS using the correct Crow CORSHandler API
+    auto& cors = app.get_middleware<crow::CORSHandler>();
+    cors.global()
+        .origin("*")
+        .methods("GET"_method, "POST"_method, "PUT"_method, "DELETE"_method, "OPTIONS"_method)
+        .headers("Content-Type", "Authorization", "Access-Control-Allow-Origin")
+        .max_age(3600);
 
     // ---------------------------------------------------------------------------
     // REST API Routes
     // ---------------------------------------------------------------------------
+
+    // Explicit OPTIONS handler for all /api/ routes to prevent Crow's default router
+    // from short-circuiting the CORSHandler middleware.
+    CROW_ROUTE(app, "/api/<path>")
+        .methods("OPTIONS"_method)
+    ([](std::string /*path*/) {
+        return crow::response(204);
+    });
 
     // Health check endpoints — no method restriction so HEAD/GET both match.
     // Render's health checker and port scanner rely on these returning 200.
