@@ -207,7 +207,7 @@ int main(int argc, char* argv[]) {
     // ---------------------------------------------------------------------------
     CROW_CATCHALL_ROUTE(app)
     ([](const crow::request& req, crow::response& res) {
-        std::cerr << "404 catch-all hit: " << req.method_string() << " " << req.url << std::endl;
+        std::cerr << "404 catch-all hit: " << crow::method_name(req.method) << " " << req.url << std::endl;
         json body;
         body["error"] = "Not found";
         body["path"]  = std::string(req.url);
