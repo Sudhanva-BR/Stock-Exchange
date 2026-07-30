@@ -12,12 +12,15 @@ using json = nlohmann::json;
 int main(int argc, char* argv[]) {
     // Parse command line arguments for port
     int port = 8080;
-    if (argc > 1) {
+    if (const char* env_p = std::getenv("PORT")) {
+        port = std::atoi(env_p);
+    } else if (argc > 1) {
         port = std::atoi(argv[1]);
-        if (port <= 0 || port > 65535) {
-            std::cerr << "Invalid port number. Using default 8080." << std::endl;
-            port = 8080;
-        }
+    }
+    
+    if (port <= 0 || port > 65535) {
+        std::cerr << "Invalid port number. Using default 8080." << std::endl;
+        port = 8080;
     }
 
     std::cout << "Starting Mini Exchange Web Server on port " << port << "..." << std::endl;
@@ -197,7 +200,7 @@ int main(int argc, char* argv[]) {
     std::cout << "Server running on http://localhost:" << port << std::endl;
     std::cout << "WebSocket endpoint: ws://localhost:" << port << "/ws" << std::endl;
     
-    app.port(port).multithreaded().run();
+    app.bindaddr("0.0.0.0").port(port).multithreaded().run();
 
     // Cleanup
     exchangeService->stop();

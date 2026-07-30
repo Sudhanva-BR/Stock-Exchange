@@ -186,7 +186,7 @@ function App() {
 
   const fetchSymbols = useCallback(async () => {
     try {
-      const res = await fetch(`${API_BASE}/api/symbols')
+      const res = await fetch(`${API_BASE}/api/symbols`)
       if (!res.ok) return
       const data = await res.json()
       if (Array.isArray(data) && data.length > 0) {
@@ -346,7 +346,7 @@ function App() {
     const t0 = performance.now()
     ordersBufferRef.current.push(Date.now())
     try {
-      const res = await fetch(`${API_BASE}/api/orders', {
+      const res = await fetch(`${API_BASE}/api/orders`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...orderData, symbol: selectedSymbol }),
@@ -377,7 +377,7 @@ function App() {
       const t0 = performance.now()
       const body = { symbol: sym, side, type, quantity: qty }
       if (type === 'limit') body.price = price
-      await fetch(`${API_BASE}/api/orders', {
+      await fetch(`${API_BASE}/api/orders`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
