@@ -66,7 +66,12 @@ add_executable(MiniExchangeServer
     src/server/main_server.cpp 
     src/server/ExchangeService.cpp
 )
-target_link_libraries(MiniExchangeServer PRIVATE miniexchange_core nlohmann_json::nlohmann_json ws2_32 mswsock)
+target_link_libraries(MiniExchangeServer PRIVATE miniexchange_core nlohmann_json::nlohmann_json)
+if(WIN32)
+    target_link_libraries(MiniExchangeServer PRIVATE ws2_32 mswsock)
+else()
+    target_link_libraries(MiniExchangeServer PRIVATE pthread)
+endif()
 target_include_directories(MiniExchangeServer PRIVATE 
     ${CMAKE_BINARY_DIR}/_deps/crow-src/include
     ${CMAKE_BINARY_DIR}/_deps/asio-src/asio/include
