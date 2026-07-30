@@ -525,14 +525,11 @@ function App() {
           <div className="center-column">
                 <section className="card" aria-labelledby="ob-title">
                   <div className="card-header">
-                    <h2 id="ob-title">ORDER BOOK DEPTH</h2>
+                    <div className="card-title" id="ob-title"><IconBook /> Order Book</div>
                     <span className="card-badge live">Live</span>
                   </div>
                   <div className="card-body">
-                    {console.log('App render orderBook:', orderBook)}
-                    <pre style={{ color: 'white', fontSize: '10px' }}>
-                      {JSON.stringify(orderBook, null, 2)}
-                    </pre>
+                    <OrderBookDepth orderBook={orderBook} />
                   </div>
                 </section>
               <section className="card card-latency-center" aria-labelledby="lat-title">

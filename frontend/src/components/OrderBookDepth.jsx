@@ -32,7 +32,9 @@ const OrderBookRow = ({ lvl, isBid, maxTotal, fmt, fmtQty }) => {
  * OrderBookDepth — renders BIDS (left) and ASKS (right) side-by-side.
  */
 function OrderBookDepth({ orderBook }) {
-  const { bids = [], asks = [] } = orderBook
+  console.log('OrderBookDepth received orderBook:', orderBook);
+  const { bids = [], asks = [] } = orderBook || {};
+  console.log('Parsed bids:', bids, 'Parsed asks:', asks);
 
   // Cumulative totals for depth bars
   const bidsWithTotal = useMemo(() => {
