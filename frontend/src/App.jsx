@@ -55,6 +55,10 @@ function useClock() {
 }
 
 // ─── Main App ─────────────────────────────────────────────────────
+
+const API_BASE = import.meta.env.VITE_API_URL || '';
+const WS_BASE = import.meta.env.VITE_WS_URL || `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}`;
+
 function App() {
   const [selectedSymbol, setSelectedSymbol] = useState('AAPL')
   const [symbols, setSymbols]     = useState(DEFAULT_SYMBOLS)
@@ -127,7 +131,7 @@ function App() {
   // ── REST helpers ──────────────────────────────────────────────
   const fetchOrderBook = useCallback(async (symbol) => {
     try {
-      const res = await fetch(`/api/orderbook/${symbol}`)
+      const res = await fetch(`${API_BASE}/api/orderbook/${symbol}`)
       if (!res.ok) return
       const data = await res.json()
       setOrderBook(data)
@@ -144,7 +148,7 @@ function App() {
 
   const fetchDebugData = useCallback(async (symbol) => {
     try {
-      const res = await fetch(`/api/debug/orderbook/${symbol}`)
+      const res = await fetch(`${API_BASE}/api/debug/orderbook/${symbol}`)
       if (!res.ok) return
       const data = await res.json()
       setDebugData(data)
@@ -153,7 +157,7 @@ function App() {
 
   const fetchTrades = useCallback(async (symbol) => {
     try {
-      const res = await fetch(`/api/trades/${symbol}?limit=200`) // fetch more for better VWAP/Chart
+      const res = await fetch(`${API_BASE}/api/trades/${symbol}?limit=200`) // fetch more for better VWAP/Chart
       if (!res.ok) return
       const data = await res.json()
       const fetchedTrades = Array.isArray(data) ? data : []
@@ -182,7 +186,7 @@ function App() {
 
   const fetchSymbols = useCallback(async () => {
     try {
-      const res = await fetch('/api/symbols')
+      const res = await fetch(`${API_BASE}/api/symbols')
       if (!res.ok) return
       const data = await res.json()
       if (Array.isArray(data) && data.length > 0) {
@@ -238,8 +242,7 @@ function App() {
     let reconnectTimer
 
     const connect = () => {
-      const wsProto = window.location.protocol === 'https:' ? 'wss:' : 'ws:'
-      const ws = new WebSocket(`${wsProto}//${window.location.host}/ws`)
+      const ws = new WebSocket(`${WS_BASE}/ws`)
       wsRef.current = ws
 
       ws.onopen = () => {
@@ -343,7 +346,7 @@ function App() {
     const t0 = performance.now()
     ordersBufferRef.current.push(Date.now())
     try {
-      const res = await fetch('/api/orders', {
+      const res = await fetch(`${API_BASE}/api/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...orderData, symbol: selectedSymbol }),
@@ -374,7 +377,7 @@ function App() {
       const t0 = performance.now()
       const body = { symbol: sym, side, type, quantity: qty }
       if (type === 'limit') body.price = price
-      await fetch('/api/orders', {
+      await fetch(`${API_BASE}/api/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
