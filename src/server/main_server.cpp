@@ -32,24 +32,33 @@ int main(int argc, char* argv[]) {
     // Create Crow app with CORS middleware
     crow::App<crow::CORSHandler> app;
 
-    // CORS middleware
+    // Configure CORS using the correct Crow CORSHandler API
     auto& cors = app.get_middleware<crow::CORSHandler>();
     cors.global()
-        .headers("Access-Control-Allow-Origin", "*")
-        .headers("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
-        .headers("Access-Control-Allow-Headers", "Content-Type, Authorization");
-
-    // Handle OPTIONS requests for CORS preflight
-    CROW_ROUTE(app, "/<path>")
-        .methods("OPTIONS"_method)
-    ([](const crow::request& req, crow::response& res, const std::string& /*path*/) {
-        res.write("");
-        res.end();
-    });
+        .origin("*")
+        .methods("GET"_method, "POST"_method, "PUT"_method, "DELETE"_method, "OPTIONS"_method)
+        .headers("Content-Type", "Authorization")
+        .max_age(3600);
 
     // ---------------------------------------------------------------------------
     // REST API Routes
     // ---------------------------------------------------------------------------
+
+    // Health check endpoints — no method restriction so HEAD/GET both match.
+    // Render's health checker and port scanner rely on these returning 200.
+    CROW_ROUTE(app, "/")
+    ([]() {
+        crow::response res(200, "{\"status\": \"ok\", \"service\": \"miniexchange\"}");
+        res.add_header("Content-Type", "application/json");
+        return res;
+    });
+
+    CROW_ROUTE(app, "/health")
+    ([]() {
+        crow::response res(200, "{\"status\": \"ok\", \"service\": \"miniexchange\"}");
+        res.add_header("Content-Type", "application/json");
+        return res;
+    });
 
     // POST /api/orders - Submit an order
     CROW_ROUTE(app, "/api/orders")
@@ -192,6 +201,21 @@ int main(int argc, char* argv[]) {
                 std::cerr << "WebSocket message error: " << e.what() << std::endl;
             }
         });
+
+    // ---------------------------------------------------------------------------
+    // Catch-all: log unknown routes to help debug 404 floods on Render
+    // ---------------------------------------------------------------------------
+    CROW_CATCHALL_ROUTE(app)
+    ([](const crow::request& req, crow::response& res) {
+        std::cerr << "404 catch-all hit: " << req.method_string() << " " << req.url << std::endl;
+        json body;
+        body["error"] = "Not found";
+        body["path"]  = std::string(req.url);
+        res.code = 404;
+        res.add_header("Content-Type", "application/json");
+        res.write(body.dump());
+        res.end();
+    });
 
     // ---------------------------------------------------------------------------
     // Start Server
