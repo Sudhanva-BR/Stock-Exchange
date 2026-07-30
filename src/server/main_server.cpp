@@ -9,6 +9,29 @@
 
 using json = nlohmann::json;
 
+// ---------------------------------------------------------------------------
+// PathNormalizer middleware
+// Collapses consecutive slashes in the request URL before routing.
+// This makes the backend resilient to a trailing slash in VITE_API_URL:
+//   //api/orders  →  /api/orders
+// ---------------------------------------------------------------------------
+struct PathNormalizer {
+    struct context {};
+
+    void before_handle(crow::request& req, crow::response& /*res*/, context& /*ctx*/) {
+        // Replace one-or-more consecutive leading slashes with a single slash,
+        // then collapse any remaining // sequences.
+        auto& url = req.url;
+        if (url.size() >= 2 && url[0] == '/' && url[1] == '/') {
+            // Strip extra leading slashes
+            std::size_t first = url.find_first_not_of('/');
+            url = (first == std::string::npos) ? "/" : '/' + url.substr(first);
+        }
+    }
+
+    void after_handle(crow::request& /*req*/, crow::response& /*res*/, context& /*ctx*/) {}
+};
+
 int main(int argc, char* argv[]) {
     // Parse command line arguments for port
     int port = 8080;
@@ -29,8 +52,8 @@ int main(int argc, char* argv[]) {
     auto exchangeService = std::make_unique<miniexchange::ExchangeService>();
     exchangeService->start();
 
-    // Create Crow app with CORS middleware
-    crow::App<crow::CORSHandler> app;
+    // Create Crow app with PathNormalizer (runs first) + CORS middleware
+    crow::App<PathNormalizer, crow::CORSHandler> app;
 
     // Configure CORS using the correct Crow CORSHandler API
     auto& cors = app.get_middleware<crow::CORSHandler>();
