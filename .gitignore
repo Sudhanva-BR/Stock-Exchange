@@ -1,0 +1,13 @@
+# Build directories
+build/
+build_msvc/
+cmake-build-debug/
+cmake-build-debug-2/
+
+# Logs and error dumps
+*.log
+*.txt
+!CMakeLists.txt
+
+# Frontend node_modules
+frontend/node_modules/
