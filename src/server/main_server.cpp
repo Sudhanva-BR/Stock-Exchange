@@ -32,6 +32,31 @@ struct PathNormalizer {
     void after_handle(crow::request& /*req*/, crow::response& /*res*/, context& /*ctx*/) {}
 };
 
+// ---------------------------------------------------------------------------
+// CorsMiddleware
+// Explicitly handles CORS preflight and adds headers to all responses.
+// ---------------------------------------------------------------------------
+struct CorsMiddleware {
+    struct context {};
+
+    void before_handle(crow::request& req, crow::response& res, context& /*ctx*/) {
+        if (req.method == crow::HTTPMethod::OPTIONS) {
+            res.code = 204;
+            res.add_header("Access-Control-Allow-Origin", "*");
+            res.add_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+            res.add_header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+            res.add_header("Access-Control-Max-Age", "3600");
+            res.end();
+        }
+    }
+
+    void after_handle(crow::request& /*req*/, crow::response& res, context& /*ctx*/) {
+        res.add_header("Access-Control-Allow-Origin", "*");
+        res.add_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        res.add_header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    }
+};
+
 int main(int argc, char* argv[]) {
     // Parse command line arguments for port
     int port = 8080;
@@ -52,16 +77,8 @@ int main(int argc, char* argv[]) {
     auto exchangeService = std::make_unique<miniexchange::ExchangeService>();
     exchangeService->start();
 
-    // Create Crow app with PathNormalizer (runs first) + CORS middleware
-    crow::App<PathNormalizer, crow::CORSHandler> app;
-
-    // Configure CORS using the correct Crow CORSHandler API
-    auto& cors = app.get_middleware<crow::CORSHandler>();
-    cors.global()
-        .origin("*")
-        .methods("GET"_method, "POST"_method, "PUT"_method, "DELETE"_method, "OPTIONS"_method)
-        .headers("Content-Type", "Authorization")
-        .max_age(3600);
+    // Create Crow app with PathNormalizer and custom CorsMiddleware
+    crow::App<PathNormalizer, CorsMiddleware> app;
 
     // ---------------------------------------------------------------------------
     // REST API Routes
