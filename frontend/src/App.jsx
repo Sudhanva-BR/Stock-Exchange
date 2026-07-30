@@ -137,6 +137,7 @@ function App() {
       const res = await fetch(`${API_BASE}/api/orderbook/${symbol}`)
       if (!res.ok) return
       const data = await res.json()
+      console.log('Fetched OrderBook Data:', data)
       setOrderBook(data)
       
       // Update OBI history
@@ -146,7 +147,7 @@ function App() {
       const totalA = obAsks.reduce((s, l) => s + (l.quantity || 0), 0)
       const obi = totalB + totalA > 0 ? (totalB - totalA) / (totalB + totalA) : 0
       setObiHistory(prev => [...prev, obi].slice(-60))
-    } catch { }
+    } catch(err) { console.error('fetchOrderBook error:', err); }
   }, [])
 
   const fetchDebugData = useCallback(async (symbol) => {
@@ -155,7 +156,7 @@ function App() {
       if (!res.ok) return
       const data = await res.json()
       setDebugData(data)
-    } catch { }
+    } catch(err) { console.error('fetchDebugData error:', err); }
   }, [])
 
   const fetchTrades = useCallback(async (symbol) => {
@@ -184,7 +185,7 @@ function App() {
           // Realistically, we'd group them by time. 
           // Here, we'll just let the websocket build the candles for now.
       }
-    } catch { }
+    } catch(err) { console.error('fetchTrades error:', err); }
   }, [])
 
   const fetchSymbols = useCallback(async () => {
@@ -199,7 +200,7 @@ function App() {
          data.forEach(s => { initialData[s] = { lastPrice: null, changePct: null, prices: [], flashKey: 0 }})
          setSymbolPriceData(initialData)
       }
-    } catch { }
+    } catch(err) { console.error('fetchSymbols error:', err); }
   }, [])
 
   // ── Metrics loop (1s interval) ────────────────────────────────
@@ -522,15 +523,18 @@ function App() {
 
           {/* Middle-Center: Order Book + Latency */}
           <div className="center-column">
-              <section className="card card-orderbook" aria-labelledby="ob-title">
-                <div className="card-header">
-                  <div className="card-title" id="ob-title"><IconBook /> Order Book</div>
-                  <span className="card-badge live">Live</span>
-                </div>
-                <div className="card-body">
-                  <OrderBookDepth orderBook={orderBook} />
-                </div>
-              </section>
+                <section className="card" aria-labelledby="ob-title">
+                  <div className="card-header">
+                    <h2 id="ob-title">ORDER BOOK DEPTH</h2>
+                    <span className="card-badge live">Live</span>
+                  </div>
+                  <div className="card-body">
+                    {console.log('App render orderBook:', orderBook)}
+                    <pre style={{ color: 'white', fontSize: '10px' }}>
+                      {JSON.stringify(orderBook, null, 2)}
+                    </pre>
+                  </div>
+                </section>
               <section className="card card-latency-center" aria-labelledby="lat-title">
                  <div className="card-header">
                     <div className="card-title" id="lat-title"><IconActivity /> Performance Monitor</div>
