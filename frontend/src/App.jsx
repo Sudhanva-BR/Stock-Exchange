@@ -34,8 +34,8 @@ const IconOrder = () => (
 )
 const IconChart = () => (
   <svg className="card-title-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
-    <polyline points="1,12 5,7 9,9 15,3" strokeLinecap="round" strokeLinejoin="round"/>
-    <line x1="1" y1="15" x2="15" y2="15" strokeLinecap="round"/>
+    <polyline points="1,12 5,7 9,9 15,3" strokeLinecap="round" strokeLinejoin="round" />
+    <line x1="1" y1="15" x2="15" y2="15" strokeLinecap="round" />
   </svg>
 )
 const IconActivity = () => (
@@ -58,24 +58,24 @@ function useClock() {
 
 // Strip any trailing slash so fetch(`${API_BASE}/api/...`) never becomes //api/...
 const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '');
-const WS_BASE  = (import.meta.env.VITE_WS_URL  ||
+const WS_BASE = (import.meta.env.VITE_WS_URL ||
   `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}`
 ).replace(/\/+$/, '');
 
 function App() {
   const [selectedSymbol, setSelectedSymbol] = useState('AAPL')
-  const [symbols, setSymbols]     = useState(DEFAULT_SYMBOLS)
+  const [symbols, setSymbols] = useState(DEFAULT_SYMBOLS)
   const [wsConnected, setWsConnected] = useState(false)
   const [orderBook, setOrderBook] = useState({ bids: [], asks: [] })
-  const [trades, setTrades]       = useState([])
+  const [trades, setTrades] = useState([])
   const [debugData, setDebugData] = useState({
-     poolStats: { usedSlots: 0, freeSlots: 1000000, nextFreeIdx: 0, usedPct: 0 },
-     occupiedSlots: [],
-     activeNodes: [],
-     priceLevels: [],
-     freeListHead: [0, 1, 2, 3, 4, 5, 6, 7]
+    poolStats: { usedSlots: 0, freeSlots: 1000000, nextFreeIdx: 0, usedPct: 0 },
+    occupiedSlots: [],
+    activeNodes: [],
+    priceLevels: [],
+    freeListHead: [0, 1, 2, 3, 4, 5, 6, 7]
   })
-  
+
   // HFT UI States
   const [symbolPriceData, setSymbolPriceData] = useState({}) // { AAPL: { lastPrice, changePct, prices: [], flashKey, flashDir } }
   const [candles, setCandles] = useState([]) // OHLC
@@ -85,15 +85,15 @@ function App() {
   const [simRunning, setSimRunning] = useState(false)
   const [latencyMs, setLatencyMs] = useState(null)
   const [currentView, setCurrentView] = useState('trading')
-  
-  const wsRef           = useRef(null)
-  const simRef          = useRef(null)
-  const simPriceRef     = useRef({})
-  const latencyHist     = useRef([])
+
+  const wsRef = useRef(null)
+  const simRef = useRef(null)
+  const simPriceRef = useRef({})
+  const latencyHist = useRef([])
   const tradesBufferRef = useRef([])
   const ordersBufferRef = useRef([])
   const currentCandleRef = useRef(null)
-  const clock           = useClock()
+  const clock = useClock()
 
   // ── Derived market stats ──────────────────────────────────────
   const bids = orderBook?.bids || []
@@ -123,7 +123,7 @@ function App() {
     }
     return sumV > 0 ? sumPV / sumV : null
   }, [trades])
-  
+
   // Calculate Avg Trade Size for Large Print Alert
   const avgTradeSize = useMemo(() => {
     if (trades.length === 0) return 0
@@ -139,7 +139,7 @@ function App() {
       const data = await res.json()
       console.log('Fetched OrderBook Data:', data)
       setOrderBook(data)
-      
+
       // Update OBI history
       const obBids = data.bids || []
       const obAsks = data.asks || []
@@ -147,7 +147,7 @@ function App() {
       const totalA = obAsks.reduce((s, l) => s + (l.quantity || 0), 0)
       const obi = totalB + totalA > 0 ? (totalB - totalA) / (totalB + totalA) : 0
       setObiHistory(prev => [...prev, obi].slice(-60))
-    } catch(err) { console.error('fetchOrderBook error:', err); }
+    } catch (err) { console.error('fetchOrderBook error:', err); }
   }, [])
 
   const fetchDebugData = useCallback(async (symbol) => {
@@ -156,7 +156,7 @@ function App() {
       if (!res.ok) return
       const data = await res.json()
       setDebugData(data)
-    } catch(err) { console.error('fetchDebugData error:', err); }
+    } catch (err) { console.error('fetchDebugData error:', err); }
   }, [])
 
   const fetchTrades = useCallback(async (symbol) => {
@@ -166,26 +166,26 @@ function App() {
       const data = await res.json()
       const fetchedTrades = Array.isArray(data) ? data : []
       setTrades(fetchedTrades)
-      
+
       // Seed symbolPriceData for this symbol
       if (fetchedTrades.length > 0) {
-          const prices = fetchedTrades.map(t => t.price).reverse()
-          setSymbolPriceData(prev => ({
-             ...prev,
-             [symbol]: {
-                lastPrice: prices[prices.length - 1],
-                changePct: prices.length > 1 ? ((prices[prices.length - 1] - prices[0]) / prices[0]) * 100 : 0,
-                prices: prices.slice(-20),
-                flashKey: 0,
-                flashDir: null
-             }
-          }))
-          
-          // Seed candles (simple mock)
-          // Realistically, we'd group them by time. 
-          // Here, we'll just let the websocket build the candles for now.
+        const prices = fetchedTrades.map(t => t.price).reverse()
+        setSymbolPriceData(prev => ({
+          ...prev,
+          [symbol]: {
+            lastPrice: prices[prices.length - 1],
+            changePct: prices.length > 1 ? ((prices[prices.length - 1] - prices[0]) / prices[0]) * 100 : 0,
+            prices: prices.slice(-20),
+            flashKey: 0,
+            flashDir: null
+          }
+        }))
+
+        // Seed candles (simple mock)
+        // Realistically, we'd group them by time. 
+        // Here, we'll just let the websocket build the candles for now.
       }
-    } catch(err) { console.error('fetchTrades error:', err); }
+    } catch (err) { console.error('fetchTrades error:', err); }
   }, [])
 
   const fetchSymbols = useCallback(async () => {
@@ -194,49 +194,49 @@ function App() {
       if (!res.ok) return
       const data = await res.json()
       if (Array.isArray(data) && data.length > 0) {
-         setSymbols(data)
-         // Initialize symbol data
-         const initialData = {}
-         data.forEach(s => { initialData[s] = { lastPrice: null, changePct: null, prices: [], flashKey: 0 }})
-         setSymbolPriceData(initialData)
+        setSymbols(data)
+        // Initialize symbol data
+        const initialData = {}
+        data.forEach(s => { initialData[s] = { lastPrice: null, changePct: null, prices: [], flashKey: 0 } })
+        setSymbolPriceData(initialData)
       }
-    } catch(err) { console.error('fetchSymbols error:', err); }
+    } catch (err) { console.error('fetchSymbols error:', err); }
   }, [])
 
   // ── Metrics loop (1s interval) ────────────────────────────────
   useEffect(() => {
     const id = setInterval(() => {
-       const now = Date.now()
-       
-       // Calculate TPS
-       const recentTrades = tradesBufferRef.current.filter(t => now - t.time <= 1000)
-       const tps = recentTrades.length
-       tradesBufferRef.current = recentTrades
-       
-       // Calculate OPS
-       const recentOrders = ordersBufferRef.current.filter(t => now - t <= 1000)
-       const ops = recentOrders.length
-       ordersBufferRef.current = recentOrders
-       
-       // Calc p50/p99 from latencies
-       const latencies = [...latencyHist.current].sort((a,b) => a - b)
-       const p50 = latencies.length > 0 ? latencies[Math.floor(latencies.length * 0.5)] : 0
-       const p99 = latencies.length > 0 ? latencies[Math.floor(latencies.length * 0.99)] : 0
-       
-       setLatencyHistory(prev => [...prev, { p50, p99, ops, tps }].slice(-60))
-       
-       // Clear latencies slightly over time to reflect rolling
-       if (latencies.length > 100) latencyHist.current = latencyHist.current.slice(-100)
-       
-       // Handle Candle closing
-       if (currentCandleRef.current) {
-           const c = currentCandleRef.current
-           const timeStr = new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' })
-           setCandles(prev => [...prev, { ...c, time: timeStr }].slice(-60))
-           currentCandleRef.current = { open: c.close, high: c.close, low: c.close, close: c.close, time: timeStr }
-       }
-       
-       fetchDebugData(selectedSymbol)
+      const now = Date.now()
+
+      // Calculate TPS
+      const recentTrades = tradesBufferRef.current.filter(t => now - t.time <= 1000)
+      const tps = recentTrades.length
+      tradesBufferRef.current = recentTrades
+
+      // Calculate OPS
+      const recentOrders = ordersBufferRef.current.filter(t => now - t <= 1000)
+      const ops = recentOrders.length
+      ordersBufferRef.current = recentOrders
+
+      // Calc p50/p99 from latencies
+      const latencies = [...latencyHist.current].sort((a, b) => a - b)
+      const p50 = latencies.length > 0 ? latencies[Math.floor(latencies.length * 0.5)] : 0
+      const p99 = latencies.length > 0 ? latencies[Math.floor(latencies.length * 0.99)] : 0
+
+      setLatencyHistory(prev => [...prev, { p50, p99, ops, tps }].slice(-60))
+
+      // Clear latencies slightly over time to reflect rolling
+      if (latencies.length > 100) latencyHist.current = latencyHist.current.slice(-100)
+
+      // Handle Candle closing
+      if (currentCandleRef.current) {
+        const c = currentCandleRef.current
+        const timeStr = new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' })
+        setCandles(prev => [...prev, { ...c, time: timeStr }].slice(-60))
+        currentCandleRef.current = { open: c.close, high: c.close, low: c.close, close: c.close, time: timeStr }
+      }
+
+      fetchDebugData(selectedSymbol)
     }, 1000)
     return () => clearInterval(id)
   }, [selectedSymbol, fetchDebugData])
@@ -264,53 +264,53 @@ function App() {
           if (msg.type === 'trade' && msg.symbol === selectedSymbol) {
             setTrades(prev => [msg, ...prev].slice(0, 200)) // Keep 200 for good VWAP
             tradesBufferRef.current.push({ time: Date.now() })
-            
+
             // Check large print
             if (avgTradeSize > 0 && msg.quantity > avgTradeSize * 3) {
-               // large print — no alert, but could be logged
+              // large print — no alert, but could be logged
             }
 
             // Update Candle
             const p = msg.price
-            const timeStr = new Date(msg.timestamp || Date.now()).toLocaleTimeString('en-US', { hour12: false, hour:'2-digit', minute:'2-digit', second:'2-digit'})
+            const timeStr = new Date(msg.timestamp || Date.now()).toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' })
             if (!currentCandleRef.current) {
-                currentCandleRef.current = { open: p, high: p, low: p, close: p, time: timeStr }
+              currentCandleRef.current = { open: p, high: p, low: p, close: p, time: timeStr }
             } else {
-                currentCandleRef.current.high = Math.max(currentCandleRef.current.high, p)
-                currentCandleRef.current.low = Math.min(currentCandleRef.current.low, p)
-                currentCandleRef.current.close = p
+              currentCandleRef.current.high = Math.max(currentCandleRef.current.high, p)
+              currentCandleRef.current.low = Math.min(currentCandleRef.current.low, p)
+              currentCandleRef.current.close = p
             }
 
           } else if (msg.type === 'orderbook_update' && msg.symbol === selectedSymbol) {
             fetchOrderBook(selectedSymbol)
             fetchDebugData(selectedSymbol)
           }
-          
+
           // Always update symbolPriceData for Watchlist (even if not selected, if feed provided it)
           // But our feed might only send subscribed. Let's pretend it could send any trade.
           if (msg.type === 'trade') {
-              setSymbolPriceData(prev => {
-                  const sData = prev[msg.symbol] || { prices: [] }
-                  const oldPrices = sData.prices || []
-                  const p = msg.price
-                  
-                  const isUp = p >= (sData.lastPrice || p)
-                  const newPrices = [...oldPrices, p].slice(-20)
-                  const cp = newPrices.length > 1 ? ((newPrices[newPrices.length - 1] - newPrices[0]) / newPrices[0]) * 100 : 0
-                  
-                  return {
-                      ...prev,
-                      [msg.symbol]: {
-                          lastPrice: p,
-                          changePct: cp,
-                          prices: newPrices,
-                          flashKey: (sData.flashKey || 0) + 1,
-                          flashDir: isUp ? 'up' : 'down'
-                      }
-                  }
-              })
+            setSymbolPriceData(prev => {
+              const sData = prev[msg.symbol] || { prices: [] }
+              const oldPrices = sData.prices || []
+              const p = msg.price
+
+              const isUp = p >= (sData.lastPrice || p)
+              const newPrices = [...oldPrices, p].slice(-20)
+              const cp = newPrices.length > 1 ? ((newPrices[newPrices.length - 1] - newPrices[0]) / newPrices[0]) * 100 : 0
+
+              return {
+                ...prev,
+                [msg.symbol]: {
+                  lastPrice: p,
+                  changePct: cp,
+                  prices: newPrices,
+                  flashKey: (sData.flashKey || 0) + 1,
+                  flashDir: isUp ? 'up' : 'down'
+                }
+              }
+            })
           }
-          
+
         } catch { }
       }
     }
@@ -352,12 +352,12 @@ function App() {
     try {
       const res = await fetch(`${API_BASE}/api/orders`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'text/plain' },
         body: JSON.stringify({ ...orderData, symbol: selectedSymbol }),
       })
       const latency = performance.now() - t0
       latencyHist.current = [...latencyHist.current, latency]
-      
+
       const sorted = [...latencyHist.current].sort((a, b) => a - b)
       const p50 = sorted[Math.floor(sorted.length * 0.5)]
       setLatencyMs(Math.round(p50 * 10) / 10)
@@ -383,7 +383,7 @@ function App() {
       if (type === 'limit') body.price = price
       await fetch(`${API_BASE}/api/orders`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'text/plain' },
         body: JSON.stringify(body),
       })
       const latency = performance.now() - t0
@@ -405,8 +405,8 @@ function App() {
       for (let i = 0; i < Math.floor(Math.random() * 3) + 2; i++) {
         const isBuy = Math.random() > 0.5
         const offset = Math.random() * spread * 3 + spread * 0.5
-        const price  = parseFloat((isBuy ? mid - offset : mid + offset).toFixed(2))
-        const qty    = Math.floor(Math.random() * 200) + 10
+        const price = parseFloat((isBuy ? mid - offset : mid + offset).toFixed(2))
+        const qty = Math.floor(Math.random() * 200) + 10
         if (price > 0) submitSimOrder(sym, isBuy ? 'buy' : 'sell', 'limit', price, qty)
       }
 
@@ -430,7 +430,7 @@ function App() {
   }, [simRunning, runSimTick])
 
   useEffect(() => () => { if (simRef.current) clearInterval(simRef.current) }, [])
-  
+
   // ── Render ────────────────────────────────────────────────────
   return (
     <div className="app">
@@ -476,102 +476,102 @@ function App() {
       {/* ── Main ── */}
       <main className="main-content">
         {/* Top: Watchlist Strip */}
-        <WatchlistStrip 
-           symbols={symbols} 
-           selectedSymbol={selectedSymbol} 
-           onSymbolChange={handleSymbolChange} 
-           symbolPriceData={symbolPriceData} 
+        <WatchlistStrip
+          symbols={symbols}
+          selectedSymbol={selectedSymbol}
+          onSymbolChange={handleSymbolChange}
+          symbolPriceData={symbolPriceData}
         />
 
         {/* Dashboard grid */}
-        
+
         <div className="tab-container" style={{ padding: '0 16px 12px 16px', display: 'flex', gap: '8px' }}>
-           <button className={`tab-btn ${currentView === 'trading' ? 'active' : ''}`} onClick={() => setCurrentView('trading')} style={{ padding: '8px 16px', borderRadius: '4px', background: currentView === 'trading' ? 'var(--bg-accent)' : 'var(--bg-panel)', color: '#fff', border: 'none', cursor: 'pointer' }}>Trading Dashboard</button>
-           <button className={`tab-btn ${currentView === 'debug' ? 'active' : ''}`} onClick={() => setCurrentView('debug')} style={{ padding: '8px 16px', borderRadius: '4px', background: currentView === 'debug' ? 'var(--bg-accent)' : 'var(--bg-panel)', color: '#fff', border: 'none', cursor: 'pointer' }}>Memory Pool &amp; Nodes</button>
+          <button className={`tab-btn ${currentView === 'trading' ? 'active' : ''}`} onClick={() => setCurrentView('trading')} style={{ padding: '8px 16px', borderRadius: '4px', background: currentView === 'trading' ? 'var(--bg-accent)' : 'var(--bg-panel)', color: '#fff', border: 'none', cursor: 'pointer' }}>Trading Dashboard</button>
+          <button className={`tab-btn ${currentView === 'debug' ? 'active' : ''}`} onClick={() => setCurrentView('debug')} style={{ padding: '8px 16px', borderRadius: '4px', background: currentView === 'debug' ? 'var(--bg-accent)' : 'var(--bg-panel)', color: '#fff', border: 'none', cursor: 'pointer' }}>Memory Pool &amp; Nodes</button>
         </div>
 
         {currentView === 'trading' ? (
-        <div className="hft-dashboard-grid">
-          
-          {/* Middle-Left: Candlestick Chart & Tape */}
-          <div className="left-column">
-             <section className="card card-depth" aria-labelledby="depth-title">
-               <div className="card-header">
-                 <div className="card-title" id="depth-title"><IconChart /> {selectedSymbol} Candlestick Chart (1s)</div>
-                 <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                     <button className={`vwap-btn ${showVwap ? 'active' : ''}`} onClick={() => setShowVwap(!showVwap)}>
-                         VWAP {showVwap ? 'ON' : 'OFF'}
-                     </button>
-                     <span className="card-badge live">Live</span>
-                 </div>
-               </div>
-               <div className="card-body">
-                 <CandleChart candles={candles} showVwap={showVwap} vwap={vwap} />
-               </div>
-             </section>
+          <div className="hft-dashboard-grid">
 
-             <section className="card card-tradetape" aria-labelledby="tape-title">
-               <div className="card-header">
-                 <div className="card-title" id="tape-title"><IconTape /> Trade Tape</div>
-                 <span className="card-badge live">Live</span>
-               </div>
-               <div className="card-body">
-                 <TradeTape trades={trades} avgTradeSize={avgTradeSize} />
-               </div>
-             </section>
-          </div>
-
-          {/* Middle-Center: Order Book + Latency */}
-          <div className="center-column">
-                <section className="card" aria-labelledby="ob-title">
-                  <div className="card-header">
-                    <div className="card-title" id="ob-title"><IconBook /> Order Book</div>
+            {/* Middle-Left: Candlestick Chart & Tape */}
+            <div className="left-column">
+              <section className="card card-depth" aria-labelledby="depth-title">
+                <div className="card-header">
+                  <div className="card-title" id="depth-title"><IconChart /> {selectedSymbol} Candlestick Chart (1s)</div>
+                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                    <button className={`vwap-btn ${showVwap ? 'active' : ''}`} onClick={() => setShowVwap(!showVwap)}>
+                      VWAP {showVwap ? 'ON' : 'OFF'}
+                    </button>
                     <span className="card-badge live">Live</span>
                   </div>
-                  <div className="card-body">
-                    <OrderBookDepth orderBook={orderBook} />
-                  </div>
-                </section>
-              <section className="card card-latency-center" aria-labelledby="lat-title">
-                 <div className="card-header">
-                    <div className="card-title" id="lat-title"><IconActivity /> Performance Monitor</div>
-                 </div>
-                 <div className="card-body" style={{ padding: '12px' }}>
-                    <LatencyDashboard 
-                        latencyHistory={latencyHistory} 
-                        ordersPerSec={latencyHistory[latencyHistory.length-1]?.ops || 0}
-                        tradesPerSec={latencyHistory[latencyHistory.length-1]?.tps || 0}
-                    />
-                 </div>
-              </section>
-          </div>
-
-          {/* Right Column: Order Entry + OBI */}
-          <div className="right-column">
-             <section className="card col-order-entry" aria-labelledby="oe-title">
-               <div className="card-header">
-                 <div className="card-title" id="oe-title"><IconOrder /> Order Entry</div>
-               </div>
-               <div className="card-body">
-                 <OrderEntryForm onSubmit={handleOrderSubmit} selectedSymbol={selectedSymbol} />
-               </div>
-             </section>
-             
-             <section className="card card-obi" aria-labelledby="obi-title">
-                <div className="card-header">
-                   <div className="card-title" id="obi-title"><IconActivity /> Order Book Imbalance</div>
                 </div>
                 <div className="card-body">
-                   <OBIPanel obi={imbalanceRaw} obiHistory={obiHistory} />
+                  <CandleChart candles={candles} showVwap={showVwap} vwap={vwap} />
                 </div>
-             </section>
+              </section>
+
+              <section className="card card-tradetape" aria-labelledby="tape-title">
+                <div className="card-header">
+                  <div className="card-title" id="tape-title"><IconTape /> Trade Tape</div>
+                  <span className="card-badge live">Live</span>
+                </div>
+                <div className="card-body">
+                  <TradeTape trades={trades} avgTradeSize={avgTradeSize} />
+                </div>
+              </section>
+            </div>
+
+            {/* Middle-Center: Order Book + Latency */}
+            <div className="center-column">
+              <section className="card" aria-labelledby="ob-title">
+                <div className="card-header">
+                  <div className="card-title" id="ob-title"><IconBook /> Order Book</div>
+                  <span className="card-badge live">Live</span>
+                </div>
+                <div className="card-body">
+                  <OrderBookDepth orderBook={orderBook} />
+                </div>
+              </section>
+              <section className="card card-latency-center" aria-labelledby="lat-title">
+                <div className="card-header">
+                  <div className="card-title" id="lat-title"><IconActivity /> Performance Monitor</div>
+                </div>
+                <div className="card-body" style={{ padding: '12px' }}>
+                  <LatencyDashboard
+                    latencyHistory={latencyHistory}
+                    ordersPerSec={latencyHistory[latencyHistory.length - 1]?.ops || 0}
+                    tradesPerSec={latencyHistory[latencyHistory.length - 1]?.tps || 0}
+                  />
+                </div>
+              </section>
+            </div>
+
+            {/* Right Column: Order Entry + OBI */}
+            <div className="right-column">
+              <section className="card col-order-entry" aria-labelledby="oe-title">
+                <div className="card-header">
+                  <div className="card-title" id="oe-title"><IconOrder /> Order Entry</div>
+                </div>
+                <div className="card-body">
+                  <OrderEntryForm onSubmit={handleOrderSubmit} selectedSymbol={selectedSymbol} />
+                </div>
+              </section>
+
+              <section className="card card-obi" aria-labelledby="obi-title">
+                <div className="card-header">
+                  <div className="card-title" id="obi-title"><IconActivity /> Order Book Imbalance</div>
+                </div>
+                <div className="card-body">
+                  <OBIPanel obi={imbalanceRaw} obiHistory={obiHistory} />
+                </div>
+              </section>
+            </div>
           </div>
-        </div>
         ) : (
-        <div className="debug-dashboard-grid" style={{ padding: '0 16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-           <MemoryPoolPanel debugData={debugData} />
-           <NodeDataPanel debugData={debugData} />
-        </div>
+          <div className="debug-dashboard-grid" style={{ padding: '0 16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <MemoryPoolPanel debugData={debugData} />
+            <NodeDataPanel debugData={debugData} />
+          </div>
         )}
       </main>
     </div>
